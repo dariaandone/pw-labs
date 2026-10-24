@@ -6,7 +6,7 @@ set -e
 SITE="$HOME/site"
 
 echo "==> 1/4 Instalez Nginx (dureaza un minut)"
-sudo apt-get update -qq
+sudo apt-get update -qq -o Acquire::Check-Date=false
 sudo apt-get install -y -qq nginx curl > /dev/null
 
 echo "==> 2/4 Pregatesc folderul site-ului: $SITE"
